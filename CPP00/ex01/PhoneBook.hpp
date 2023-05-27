@@ -18,7 +18,7 @@
 class PhoneBook
 {
 private:
-	Contact[8];
+	Contact contacts[8];
 public:
 	PhoneBook(/* args */);
 	~PhoneBook();

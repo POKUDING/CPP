@@ -16,7 +16,7 @@
 
 int	main(int ac, char **av)
 {
-	Contact con;
+	Contact con("jk");
 
 	con.setfirstname("hello");
 	std::cout << con.getfirstname() <<  std::endl;

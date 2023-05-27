@@ -26,7 +26,8 @@ private:
 	int			phonenum;
 	
 public:
-	Contact(/* args */);
+	Contact();
+	Contact(std::string firstname, std::stirng lastname, std::string nickname, );
 	~Contact();
 	void	setFirstName(std::string firstname);
 	void	setLastName(std::string lastname);
