@@ -6,14 +6,14 @@
 #    By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 13:24:08 by junhyupa          #+#    #+#              #
-#    Updated: 2023/05/31 19:30:02 by junhyupa         ###   ########.fr        #
+#    Updated: 2023/06/07 20:20:09 by junhyupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := PhoneBook
 
 CC := c++
-CFLAGS := -Wall -Werror -Wextra -g -fsanitize=address -std=c++98
+CFLAGS := -Wall -Werror -Wextra -std=c++98
 
 SRC := main.cpp PhoneBook.cpp Contact.cpp
 

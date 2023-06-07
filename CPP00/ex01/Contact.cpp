@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 16:27:08 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/01 11:06:23 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/07 20:09:18 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,43 @@ std::string	Contact::getdarkestscret(void)
 std::string	Contact::getphonenum(void)
 {
 	return	this->phonenum;
+}
+
+std::string	Contact::indexfirstname(void)
+{
+	std::string	tmp;
+
+	tmp = this->firstname;
+	if (tmp.length() > 10)
+	{
+		tmp.resize(10);
+		tmp.replace(9, 1, ".");
+	}
+	return tmp;
+}
+
+std::string	Contact::indexlastname(void)
+{
+	std::string	tmp;
+
+	tmp = this->lastname;
+	if (tmp.length() > 10)
+	{
+		tmp.resize(10);
+		tmp.replace(9, 1, ".");
+	}
+	return tmp;
+}
+
+std::string	Contact::indexnickname(void)
+{
+	std::string	tmp;
+
+	tmp = this->nickname;
+	if (tmp.length() > 10)
+	{
+		tmp.resize(10);
+		tmp.replace(9, 1, ".");
+	}
+	return tmp;
 }

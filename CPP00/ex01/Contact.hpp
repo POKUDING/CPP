@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 16:30:21 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/05/31 18:59:21 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/07 20:04:29 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ public:
 	std::string	getnickname(void);
 	std::string	getdarkestscret(void);
 	std::string	getphonenum(void);
+	std::string	indexfirstname(void);
+	std::string	indexlastname(void);
+	std::string	indexnickname(void);
 };
 
 #endif
