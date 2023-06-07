@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 16:30:21 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/05/27 21:00:43 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/05/31 18:59:21 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,23 @@ private:
 	std::string	lastname;
 	std::string	nickname;
 	std::string	darkestscret;
-	int			phonenum;
+	std::string	phonenum;
 	
 public:
 	Contact();
-	Contact(std::string firstname, std::stirng lastname, std::string nickname, );
-	~Contact();
-	void	setFirstName(std::string firstname);
-	void	setLastName(std::string lastname);
-	void	setNickName(std::string nickname);
-	void	setDarkestScret(std::string darkestscret);
+	Contact(std::string firstname, std::string lastname, std::string nickname, std::string darkestscret, std::string phonenum);
 	
-	std::string	getFirstName(void);
-	std::string	getLastName(void);
-	std::string	getNickName(void);
-	std::string	getDarkestScret(void);
-	int			getPhonenum(void);
+	void	setfirstname(std::string firstname);
+	void	setlastname(std::string lastname);
+	void	setnickname(std::string nickname);
+	void	setdarkestscret(std::string darkestscret);
+	void	setphonenum(std::string phonenum);
+	
+	std::string	getfirstname(void);
+	std::string	getlastname(void);
+	std::string	getnickname(void);
+	std::string	getdarkestscret(void);
+	std::string	getphonenum(void);
 };
 
 #endif

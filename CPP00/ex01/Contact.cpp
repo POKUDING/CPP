@@ -6,53 +6,64 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 16:27:08 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/05/27 20:57:55 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/01 11:06:23 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-void	Contact::setFirstName(std::string firstname)
+Contact::Contact() : firstname("empty"), lastname(""), nickname(""), darkestscret(""), phonenum("") {}
+
+
+Contact::Contact(std::string firstname, std::string lastname, std::string nickname, std::string darkestscret, std::string phonenum)
+: firstname(firstname), lastname(lastname), nickname(nickname), darkestscret(darkestscret), phonenum(phonenum) {}
+
+void	Contact::setfirstname(std::string firstname)
 {
 	this->firstname = firstname;
 }
 
-void	Contact::setLastName(std::string lastname)
+void	Contact::setlastname(std::string lastname)
 {
-	this->firstname = lastname;
+	this->lastname = lastname;
 }
 
-void	Contact::setNickName(std::string nickname)
+void	Contact::setnickname(std::string nickname)
 {
-	this->firstname = nickname;
+	this->nickname = nickname;
 }
 
-void	Contact::setDarkestScret(std::string darkestscret)
+void	Contact::setdarkestscret(std::string darkestscret)
 {
-	this->firstname = darkestscret;
+	this->darkestscret = darkestscret;
 }
 
-std::string	Contact::getFirstName(void)
+void	Contact::setphonenum(std::string phonenum)
+{
+	this->phonenum = phonenum;
+}
+
+std::string	Contact::getfirstname(void)
 {
 	return	this->firstname;
 }
 
-std::string	Contact::getLastName(void)
+std::string	Contact::getlastname(void)
 {
 	return	this->lastname;
 }
 
-std::string	Contact::getNickName(void)
+std::string	Contact::getnickname(void)
 {
 	return	this->nickname;
 }
 
-std::string	Contact::getDarkestScret(void)
+std::string	Contact::getdarkestscret(void)
 {
 	return	this->darkestscret;
 }
 
-int	Contact::getPhonenum(void)
+std::string	Contact::getphonenum(void)
 {
 	return	this->phonenum;
 }

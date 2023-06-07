@@ -6,27 +6,27 @@
 #    By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 13:24:08 by junhyupa          #+#    #+#              #
-#    Updated: 2023/05/22 13:47:28 by junhyupa         ###   ########.fr        #
+#    Updated: 2023/05/31 19:30:02 by junhyupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := PhoneBook
 
-CC := g++
-CFLAGS := -Wall -Werror -Wextra -std=c++98
+CC := c++
+CFLAGS := -Wall -Werror -Wextra -g -fsanitize=address -std=c++98
 
-SRC := megaphone.cpp
+SRC := main.cpp PhoneBook.cpp Contact.cpp
 
 OBJS := $(SRC:.cpp=.o)
 
 all : $(NAME)
 
-%.o : %.c
-	$(CC) $(CFLAGS) $(SRC) -c $< -o $@
+%.o : %.cpp
+	$(CC) $(CFLAGS) -c $< -o $@
 
 re : fclean all
 
-clean : $(OBJS)
+clean :
 	rm -rf $(OBJS)
 
 fclean : clean

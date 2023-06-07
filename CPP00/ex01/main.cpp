@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 16:36:13 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/05/27 20:59:01 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/01 10:58:46 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
-int	main(int ac, char **av)
+int	main()
 {
-	Contact con("jk");
+	PhoneBook pb;
 
-	con.setfirstname("hello");
-	std::cout << con.getfirstname() <<  std::endl;
+	return(pb.runphonebook());
 }
