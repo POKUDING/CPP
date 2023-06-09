@@ -6,12 +6,11 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 16:43:45 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/09 15:22:30 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:29:52 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <string>
 
 std::string	converter(std::string av)
 {
