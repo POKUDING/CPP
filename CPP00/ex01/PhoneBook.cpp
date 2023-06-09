@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 20:48:27 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/08 18:33:18 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:23:55 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,17 +69,8 @@ void	PhoneBook::searchcontact()
 		else if (std::cin.eof())
 			exit (1);
 		std::cout << "Wrong index num" << std::endl;
-		std::cin.ignore(1164, '\n');
-		std::cin >> tmp;
-		std::cout << tmp;
-		if (std::cin.fail())
-			std::cout << "faile!" << std::endl;
 		std::cin.clear();
 		std::cin.ignore(1164, '\n');
-		std::cin >> tmp;
-		std::cout << tmp;
-		if (std::cin.fail())
-			std::cout << "faile!" << std::endl;
 	}
 	std::cin.ignore(1164, '\n');
 	this->printcontact(i - 1);

@@ -6,7 +6,7 @@
 #    By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 13:24:08 by junhyupa          #+#    #+#              #
-#    Updated: 2023/06/08 16:33:21 by junhyupa         ###   ########.fr        #
+#    Updated: 2023/06/09 15:25:11 by junhyupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ OBJS := $(SRC:.cpp=.o)
 
 all : $(NAME)
 
-%.o :
+%.o : %.cpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 re : fclean all

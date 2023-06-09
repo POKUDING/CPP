@@ -6,13 +6,13 @@
 #    By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 13:24:08 by junhyupa          #+#    #+#              #
-#    Updated: 2023/05/22 13:47:28 by junhyupa         ###   ########.fr        #
+#    Updated: 2023/06/09 15:23:05 by junhyupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := megaphone
 
-CC := g++
+CC := c++
 CFLAGS := -Wall -Werror -Wextra -std=c++98
 
 SRC := megaphone.cpp
