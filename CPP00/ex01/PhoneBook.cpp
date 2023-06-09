@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 20:48:27 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/07 20:27:32 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/08 18:33:18 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void	PhoneBook::addcontact(int index)
 void	PhoneBook::searchcontact()
 {
 	int	i;
+	std::string tmp;
 
 	while (1)
 	{
@@ -68,8 +69,17 @@ void	PhoneBook::searchcontact()
 		else if (std::cin.eof())
 			exit (1);
 		std::cout << "Wrong index num" << std::endl;
+		std::cin.ignore(1164, '\n');
+		std::cin >> tmp;
+		std::cout << tmp;
+		if (std::cin.fail())
+			std::cout << "faile!" << std::endl;
 		std::cin.clear();
 		std::cin.ignore(1164, '\n');
+		std::cin >> tmp;
+		std::cout << tmp;
+		if (std::cin.fail())
+			std::cout << "faile!" << std::endl;
 	}
 	std::cin.ignore(1164, '\n');
 	this->printcontact(i - 1);
@@ -92,6 +102,7 @@ void	PhoneBook::printcontact(int index)
 	std::cout << "firstname : " << this->contacts[index].getfirstname() << std::endl;
 	std::cout << "lastname : " << this->contacts[index].getlastname() << std::endl;
 	std::cout << "nickname : " << this->contacts[index].getnickname() << std::endl;
+	std::cout << "darkestscret : " << this->contacts[index].getdarkestscret() << std::endl;
 	std::cout << "phonenum : " << this->contacts[index].getphonenum() << std::endl;
 }
 
