@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 20:48:27 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/08 16:46:34 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:37:59 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,9 +70,9 @@ void	PhoneBook::searchcontact()
 			exit (1);
 		std::cout << "\n////Wrong index num////" << std::endl;
 		std::cin.clear();
-		std::cin.ignore(1164, '\n');
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	}
-	std::cin.ignore(1164, '\n');
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	this->printcontact(i - 1);
 }
 

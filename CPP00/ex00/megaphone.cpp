@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 16:43:45 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/09 15:29:52 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/09 15:34:31 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 std::string	converter(std::string av)
 {
-	for(int i = 0; i < av.length(); i++)
+	for(size_t i = 0; i < av.length(); i++)
 		av[i] = std::toupper(av[i]);
 	return (av);
 }
