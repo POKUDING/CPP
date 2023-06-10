@@ -6,16 +6,16 @@
 #    By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 13:24:08 by junhyupa          #+#    #+#              #
-#    Updated: 2023/06/10 16:39:57 by junhyupa         ###   ########.fr        #
+#    Updated: 2023/06/10 16:55:26 by junhyupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME := zombie
+NAME := ex02
 
 CC := c++
 CFLAGS := -Wall -Werror -Wextra -std=c++98
 
-SRC := main.cpp Zombie.cpp zombieHorde.cpp
+SRC := main.cpp
 
 OBJS := $(SRC:.cpp=.o)
 

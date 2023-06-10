@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 17:17:10 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/08 17:26:45 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/10 16:22:13 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ public:
 	Zombie();
 	Zombie(std::string name);
 	~Zombie();
+
+	void	setName(std::string name);
 	void	announce( void );
 };
 

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/08 17:19:39 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/10 16:22:06 by junhyupa         ###   ########.fr       */
+/*   Created: 2023/06/10 17:05:22 by junhyupa          #+#    #+#             */
+/*   Updated: 2023/06/10 18:30:52 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-Zombie::Zombie() {}
 
-Zombie::Zombie(std::string name) : name(name) {}
-
-Zombie::~Zombie()
+Weapon::Weapon(std::string type) : type(type) {}
+Weapon::~Weapon()
 {
-	std::cout << this->name << ": dead" << std::endl;
+	std::cout << this->type << " destroyed" << std::endl;
 }
 
-void	Zombie::setName( std::string name )
+const std::string &Weapon::getType()
 {
-	this->name = name;
+	std::string	&rtn = this->type;
+
+	return rtn;
 }
 
-void	Zombie::announce( void )
+void Weapon::setType(const	std::string type)
 {
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	this->type = type;
 }

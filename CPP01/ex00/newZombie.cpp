@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 17:22:48 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/09 15:40:56 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/10 16:07:38 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 Zombie* newZombie( std::string name )
 {
-	
+	Zombie	*rtn;
+
+	rtn = new Zombie(name);
+	return rtn;
 }

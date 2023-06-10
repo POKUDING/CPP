@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/08 17:19:39 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/10 16:22:06 by junhyupa         ###   ########.fr       */
+/*   Created: 2023/06/10 16:15:49 by junhyupa          #+#    #+#             */
+/*   Updated: 2023/06/10 17:37:33 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ZOMBIEHORDE_HPP
+# define ZOMBIEHORDE_HPP
+
 #include "Zombie.hpp"
+#include <sstream>
 
-Zombie::Zombie() {}
-
-Zombie::Zombie(std::string name) : name(name) {}
-
-Zombie::~Zombie()
+Zombie* zombieHorde( int N, std::string name )
 {
-	std::cout << this->name << ": dead" << std::endl;
+	std::stringstream	stream;
+	Zombie	*rtn = new Zombie[N];
+
+	for(int i = 0; i < N; i++)
+	{
+		stream.str("");
+		stream << i;
+		rtn[i].setName(name + stream.str());
+	}
+	return rtn;
 }
 
-void	Zombie::setName( std::string name )
-{
-	this->name = name;
-}
-
-void	Zombie::announce( void )
-{
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#endif

@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/08 17:19:39 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/10 16:22:06 by junhyupa         ###   ########.fr       */
+/*   Created: 2023/06/10 18:38:05 by junhyupa          #+#    #+#             */
+/*   Updated: 2023/06/10 18:43:06 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include <fstream>
 
-Zombie::Zombie() {}
-
-Zombie::Zombie(std::string name) : name(name) {}
-
-Zombie::~Zombie()
+int	main(int argc, char **argv)
 {
-	std::cout << this->name << ": dead" << std::endl;
-}
+	std::string	av[3];
+	std::ifstream	infile;
+	std::ofstream	outfile;
 
-void	Zombie::setName( std::string name )
-{
-	this->name = name;
-}
-
-void	Zombie::announce( void )
-{
-	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	if (argc != 4)
+	{
+		std::cout << "check argv" << std::endl;
+		return (1);
+	}
+	av[0] = argv[1];
+	av[1] = argv[2];
+	av[2] = argv[3];
+	if (!av[0].length() || !av[1].length() || 1av[2].length)
+	{
+		std::cout << "check argv" << std::endl;
+		return (1);
+	}
 }
