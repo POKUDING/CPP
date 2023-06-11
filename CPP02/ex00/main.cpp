@@ -5,21 +5,23 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/10 19:16:06 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/11 14:41:20 by junhyupa         ###   ########.fr       */
+/*   Created: 2023/06/11 18:43:07 by junhyupa          #+#    #+#             */
+/*   Updated: 2023/06/11 18:58:15 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Harl.hpp"
+#include "Fixed.hpp"
 
-int main(int ac, char **av)
-{
-	Harl harl;
+int main( void ) {
+	Fixed a;
+	Fixed b( a );
+	Fixed c;
 
-	if (ac != 2)
-		std::cout << "check argv" <<std::endl;
-	else
-		harl.harlFilter(av[1]);
-	return (0);
+	c = b;
+
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+	return 0;
 }

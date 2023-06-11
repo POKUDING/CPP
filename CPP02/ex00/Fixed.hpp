@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/10 19:16:06 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/11 14:41:20 by junhyupa         ###   ########.fr       */
+/*   Created: 2023/06/11 17:26:09 by junhyupa          #+#    #+#             */
+/*   Updated: 2023/06/11 18:34:24 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Harl.hpp"
+#ifndef FIXED_H
+# define FIXED_H
 
-int main(int ac, char **av)
+# include <iostream>
+
+class Fixed
 {
-	Harl harl;
+private:
+	int	value;
+	static const int	point = 8;
+public:
+	Fixed(/* args */);
+	Fixed(const Fixed& src);
+	Fixed& operator = (const Fixed& src);
+	~Fixed();
+	int getRawBits( void ) const;
+	void setRawBits( int const raw );
+};
 
-	if (ac != 2)
-		std::cout << "check argv" <<std::endl;
-	else
-		harl.harlFilter(av[1]);
-	return (0);
-}
+#endif

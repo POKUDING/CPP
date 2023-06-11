@@ -5,21 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/10 19:16:06 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/11 14:41:20 by junhyupa         ###   ########.fr       */
+/*   Created: 2023/06/11 18:43:07 by junhyupa          #+#    #+#             */
+/*   Updated: 2023/06/11 18:59:07 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Harl.hpp"
+#include "Fixed.hpp"
 
-int main(int ac, char **av)
+int main( void )
 {
-	Harl harl;
+	Fixed a;
+	Fixed const b( 10 );
+	Fixed const c( 42.42f );
+	Fixed const d( b );
 
-	if (ac != 2)
-		std::cout << "check argv" <<std::endl;
-	else
-		harl.harlFilter(av[1]);
-	return (0);
+	a = Fixed( 1234.4321f );
+
+	std::cout << "a is " << a << std::endl;
+	std::cout << "b is " << b << std::endl;
+	std::cout << "c is " << c << std::endl;
+	std::cout << "d is " << d << std::endl;
+	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
+	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
+	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	return 0;
 }

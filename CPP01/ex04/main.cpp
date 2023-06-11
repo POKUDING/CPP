@@ -6,30 +6,22 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 18:38:05 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/10 18:43:06 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/11 15:26:30 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
+#include "Replace.hpp"
 
-int	main(int argc, char **argv)
+int	main(int ac, char **av)
 {
-	std::string	av[3];
-	std::ifstream	infile;
-	std::ofstream	outfile;
 
-	if (argc != 4)
+	if (ac == 4)
 	{
-		std::cout << "check argv" << std::endl;
-		return (1);
+		Replace	rp(av[1], av[2], av[3]);
+		return (rp.replacing());
 	}
-	av[0] = argv[1];
-	av[1] = argv[2];
-	av[2] = argv[3];
-	if (!av[0].length() || !av[1].length() || 1av[2].length)
-	{
-		std::cout << "check argv" << std::endl;
-		return (1);
-	}
+	std::cout << "check argc" << std::endl;
+	return (1);
 }

@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Replace.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/10 19:16:06 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/11 14:41:20 by junhyupa         ###   ########.fr       */
+/*   Created: 2023/06/11 15:06:50 by junhyupa          #+#    #+#             */
+/*   Updated: 2023/06/11 15:27:43 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Harl.hpp"
+#ifndef REPLACE_HPP
+# define REPLACE_HPP
 
-int main(int ac, char **av)
+# include <iostream>
+# include <fstream>
+# include <string>
+
+class Replace
 {
-	Harl harl;
+private:
+	std::string		av[3];
+	std::ifstream	infile_s;
+	std::ofstream	outfile_s;
 
-	if (ac != 2)
-		std::cout << "check argv" <<std::endl;
-	else
-		harl.harlFilter(av[1]);
-	return (0);
-}
+	int	check_len();
+	int	open_file();
+public:
+	Replace(std::string infile, std::string erase, std::string insert);
+	~Replace();
+	int	replacing();
+};
+
+#endif
