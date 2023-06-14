@@ -6,13 +6,13 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 18:27:06 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/11 19:15:40 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/14 17:46:53 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-std::ostream& operator <<(std::ostream &out, const Fixed &src)
+std::ostream& operator<<(std::ostream &out, const Fixed &src)
 {
 	out << src.toFloat();
 	return (out);	
@@ -33,8 +33,7 @@ Fixed::Fixed(const int value)
 Fixed::Fixed(const float value)
 {
 	std::cout << "Float constructor called" << std::endl;
-	this->value = static_cast<int>(value) << this->point;
-	this->value += value - static_cast<int>(value);
+	this->value = roundf(value * (1 << this->point));
 }
 
 Fixed::Fixed(const Fixed& src)
@@ -59,7 +58,6 @@ Fixed::~Fixed()
 
 int Fixed::getRawBits( void ) const
 {
-	std::cout << "getRawBits member function called" << std::endl;
 	return this->value;
 }
 
@@ -71,10 +69,10 @@ void Fixed::setRawBits( int const raw )
 
 float	Fixed::toFloat( void ) const
 {
-	
+	return (static_cast<float>(this->getRawBits()) / (1 << 8));
 }
 
 int Fixed::toInt( void ) const
 {
-	return this->getRawBits();
+	return (this->getRawBits() / (1 << 8));
 }

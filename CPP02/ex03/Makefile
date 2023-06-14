@@ -6,7 +6,7 @@
 #    By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 13:24:08 by junhyupa          #+#    #+#              #
-#    Updated: 2023/06/14 17:16:23 by junhyupa         ###   ########.fr        #
+#    Updated: 2023/06/14 21:14:26 by junhyupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME := a.out
 CXX := c++
 CXXFLAGS := -Wall -Werror -Wextra -std=c++98
 
-SRC := main.cpp Fixed.cpp
+SRC := main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 OBJS := $(SRC:.cpp=.o)
 

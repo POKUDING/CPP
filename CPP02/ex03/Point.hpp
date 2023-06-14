@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/10 16:04:41 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/14 19:18:13 by junhyupa         ###   ########.fr       */
+/*   Created: 2023/06/14 20:49:47 by junhyupa          #+#    #+#             */
+/*   Updated: 2023/06/15 01:01:01 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef POINT_HPP
+# define POINT_HPP
 
-Zombie* zombieHorde( int N, std::string name );
+# include "Fixed.hpp"
 
-int	main(void)
+class Point
 {
-	Zombie	*zb;
+private:
+	Fixed const x;
+	Fixed const y;
+public:
+	Point();
+	Point(const Fixed& x, const Fixed& y);
+	Point(const Point& src);
+	Point& operator = (const Point &src);
+	~Point();
 
-	zb = zombieHorde(10, "horde zombie");
-	for(int	i = 0; i < 10; i++)
-	{
-		zb[i].announce();
-	}
-	delete[] zb;
-}
+	const Fixed	getx(void) const;
+	const Fixed gety(void) const;
+};
+
+#endif

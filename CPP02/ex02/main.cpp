@@ -5,23 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/10 16:04:41 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/14 19:18:13 by junhyupa         ###   ########.fr       */
+/*   Created: 2023/06/11 18:43:07 by junhyupa          #+#    #+#             */
+/*   Updated: 2023/06/14 20:43:57 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include "Fixed.hpp"
 
-Zombie* zombieHorde( int N, std::string name );
+int main( void ) {
+	Fixed a;
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-int	main(void)
-{
-	Zombie	*zb;
-
-	zb = zombieHorde(10, "horde zombie");
-	for(int	i = 0; i < 10; i++)
-	{
-		zb[i].announce();
-	}
-	delete[] zb;
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
+	return 0;
 }

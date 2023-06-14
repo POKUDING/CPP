@@ -6,29 +6,34 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 18:43:07 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/14 17:44:51 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/15 01:03:15 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Fixed.hpp"
+#include "Point.hpp"
 
-int main( void )
-{
+bool bsp( Point const a, Point const b, Point const c, Point const point);
+
+int main( void ) {
 	Fixed a;
-	Fixed const b( 10 );
-	Fixed const c( 42.42f );
-	Fixed const d( b );
+	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 
-	a = Fixed( 1234.4321f );
+	std::cout << a << std::endl;
+	std::cout << ++a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a++ << std::endl;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << Fixed::max( a, b ) << std::endl;
 
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
+	// Point	pa(Fixed(3), Fixed(0));
+	// Point	pb(Fixed(0), Fixed(3));
+	// Point	pc(Fixed(0), Fixed(0));
+	// Point	pp(Fixed(1), Fixed(1));
+	// std::cout << pa.getx() << pa.gety() << std::endl;
+	// if(bsp(pa, pb, pc, pp))
+	// 	std::cout << "true" << std::endl;
+	// else
+	// 	std::cout << "false" << std::endl;
 	return 0;
 }
