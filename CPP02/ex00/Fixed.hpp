@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 17:26:09 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/11 18:34:24 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/15 16:27:05 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ private:
 	int	value;
 	static const int	point = 8;
 public:
-	Fixed(/* args */);
+	Fixed();
 	Fixed(const Fixed& src);
 	Fixed& operator = (const Fixed& src);
 	~Fixed();

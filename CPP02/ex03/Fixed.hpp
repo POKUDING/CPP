@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 17:26:09 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/15 00:39:20 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/15 16:28:21 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,13 @@ public:
 	Fixed	operator * (const Fixed& src) const;
 	Fixed	operator / (const Fixed& src) const;
 	Fixed&			operator ++ ();
-	const Fixed	operator ++ (int);
+	const Fixed		operator ++ (int);
 	Fixed&			operator -- ();
-	const Fixed	operator -- (int);
+	const Fixed		operator -- (int);
 	static Fixed&			min(Fixed& src1, Fixed& src2);
-	static const Fixed&	min(const Fixed& src1, const Fixed& src2);
+	static const Fixed&		min(const Fixed& src1, const Fixed& src2);
 	static Fixed&			max(Fixed& src1, Fixed& src2);
-	static const Fixed&	max(const Fixed& src1, const Fixed& src2);
+	static const Fixed&		max(const Fixed& src1, const Fixed& src2);
 };
 
 std::ostream& operator<<(std::ostream &out, const Fixed &src);

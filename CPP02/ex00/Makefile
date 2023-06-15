@@ -6,7 +6,7 @@
 #    By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 13:24:08 by junhyupa          #+#    #+#              #
-#    Updated: 2023/06/11 18:45:13 by junhyupa         ###   ########.fr        #
+#    Updated: 2023/06/15 16:31:31 by junhyupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJS := $(SRC:.cpp=.o)
 all : $(NAME)
 
 %.o : %.cpp
-	$(CXX) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 re : 
 	make fclean
@@ -36,6 +36,6 @@ fclean :
 	$(RM) -rf $(NAME)
 
 $(NAME) : $(OBJS)
-	$(CXX) $^ -o $@
+	$(CXX) $(CXXFLAGS) $^ -o $@
 
 .PHONY : all clean fclean re
