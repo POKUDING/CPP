@@ -6,10 +6,11 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 18:43:07 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/15 01:03:15 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/15 16:36:25 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "Point.hpp"
 
 bool bsp( Point const a, Point const b, Point const c, Point const point);
