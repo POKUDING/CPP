@@ -6,26 +6,21 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 16:54:54 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/18 15:36:37 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/18 19:16:06 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void)
 {
-	ScavTrap a("Scav a");
-	ScavTrap b("Scav b");
-	ScavTrap c("Scav c");
-	ClapTrap *p;
+	FragTrap	a("Frag a");
+	FragTrap	b("Frag b");
 
-	a.attack("Scav b");
-	b.takeDamage(20);
-	b.beRepaired(10);
-	c = b;
-	c.gaurdGate();
-	p = new ScavTrap(a);
-	delete p;
+	a.attack("Frag b");
+	b.takeDamage(30);
+	b.beRepaired(15);
+	b.highFivesGuys();
 	return 0;
 }

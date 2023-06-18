@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 16:54:49 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/17 18:15:16 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/18 19:26:42 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ ClapTrap&	ClapTrap::operator = (const ClapTrap& src)
 ClapTrap::~ClapTrap()
 {
 	std::cout << "ClapTrap " << _name << ": destroy" << std::endl;
-
 }
 
 void	ClapTrap::attack(const std::string& target)
@@ -67,11 +66,11 @@ void	ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	std::cout << "ClapTrap " << _name << " attacked, taked " << amount << " damage" << std::endl;
+	std::cout << _name << " attacked, taked " << amount << " damage" << std::endl;
 	this->_hitpoint -= amount;
 	if (_hitpoint < 0)
 		this->_hitpoint = 0;
-	std::cout << "ClapTrap " << _name << " left " << _hitpoint << " hitpoint" << std::endl;
+	std::cout << _name << " left " << _hitpoint << " hitpoint" << std::endl;
 
 }
 
@@ -79,9 +78,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 {
 	if (!_energypoint)
 	{
-		std::cout << "ClapTrap " << _name << " has no energy" << std::endl;
+		std::cout << _name << " has no energy" << std::endl;
 		return ;
 	}
-	std::cout << "ClapTrap " << _name << " repairs " << amount << " points!" << std::endl;
+	std::cout << _name << " repairs " << amount << " points!" << std::endl;
 	this->_energypoint--;
 }

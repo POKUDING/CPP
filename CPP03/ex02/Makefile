@@ -6,7 +6,7 @@
 #    By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/22 13:24:08 by junhyupa          #+#    #+#              #
-#    Updated: 2023/06/18 15:09:26 by junhyupa         ###   ########.fr        #
+#    Updated: 2023/06/18 19:16:13 by junhyupa         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME := a.out
 CXX := c++
 CXXFLAGS := -Wall -Werror -Wextra -std=c++98
 
-SRC := main.cpp ClapTrap.cpp ScavTrap.cpp
+SRC := main.cpp ClapTrap.cpp FragTrap.cpp
 
 OBJS := $(SRC:.cpp=.o)
 

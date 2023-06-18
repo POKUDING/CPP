@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/15 16:54:54 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/18 15:36:37 by junhyupa         ###   ########.fr       */
+/*   Created: 2023/06/18 14:52:30 by junhyupa          #+#    #+#             */
+/*   Updated: 2023/06/18 19:27:00 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "ScavTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int	main(void)
+# include <string>
+# include <iostream>
+# include "ClapTrap.hpp"
+
+class ScavTrap : public ClapTrap
 {
-	ScavTrap a("Scav a");
-	ScavTrap b("Scav b");
-	ScavTrap c("Scav c");
-	ClapTrap *p;
+private:
+public:
+	ScavTrap();
+	ScavTrap(std::string name);
+	ScavTrap(const ScavTrap& src);
+	ScavTrap&	operator = (const ScavTrap& src);
+	~ScavTrap();
 
-	a.attack("Scav b");
-	b.takeDamage(20);
-	b.beRepaired(10);
-	c = b;
-	c.gaurdGate();
-	p = new ScavTrap(a);
-	delete p;
-	return 0;
-}
+	void 	attack(const std::string& target);
+	void	gaurdGate() const;
+};
+
+#endif

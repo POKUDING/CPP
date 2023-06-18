@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 16:54:54 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/17 18:16:10 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/18 19:28:53 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	main(void)
 	for (int i = 0; i < 11; i++)
 	{
 		a.attack("Trap c");
-		c.takeDamage(1);
-		c.beRepaired(1);
+		c.takeDamage(0);
+		c.beRepaired(0);
 	}
 	b = c;
 	b.attack("Trap a");

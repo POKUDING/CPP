@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 16:54:52 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/18 15:37:14 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/18 19:22:13 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ public:
 	virtual ~ClapTrap();
 
 	virtual void attack(const std::string& target);
-	virtual void takeDamage(unsigned int amount);
-	virtual void beRepaired(unsigned int amount);
+	void takeDamage(unsigned int amount);
+	void beRepaired(unsigned int amount);
 };
 
 
