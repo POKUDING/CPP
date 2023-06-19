@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 16:54:54 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/18 19:28:53 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/19 15:57:37 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	main(void)
 	ClapTrap 	a("Trap a");
 	ClapTrap	b;
 	ClapTrap	c("Trap c");
+	ClapTrap	d("Trap d");
 
 	for (int i = 0; i < 11; i++)
 	{
@@ -25,6 +26,9 @@ int	main(void)
 		c.takeDamage(0);
 		c.beRepaired(0);
 	}
-	b = c;
+	b = d;
 	b.attack("Trap a");
+	b.takeDamage(UINT32_MAX);
+	b.beRepaired(10);
+	b.beRepaired(UINT32_MAX);
 }

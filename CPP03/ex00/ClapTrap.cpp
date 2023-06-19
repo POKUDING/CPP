@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 16:54:49 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/18 19:28:44 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/19 15:58:04 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,21 +66,30 @@ void	ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
+	int	tmp;
+
+	tmp = this->_hitpoint;
 	std::cout << _name << " attacked, taked " << amount << " damage" << std::endl;
 	this->_hitpoint -= amount;
-	if (_hitpoint < 0)
+	if (_hitpoint < 0 || tmp < this->_hitpoint)
 		this->_hitpoint = 0;
 	std::cout << _name << " left " << _hitpoint << " hitpoint" << std::endl;
-
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
 {
+	int	tmp;
+
 	if (!_energypoint)
 	{
 		std::cout << _name << " has no energy" << std::endl;
 		return ;
 	}
-	std::cout << _name << " repairs " << amount << " points!" << std::endl;
+	tmp = this->_hitpoint;
+	this->_hitpoint += amount;
+	if (this->_hitpoint < tmp)
+		this->_hitpoint = INT_MAX;
+	std::cout << _name << " repairs " << (this->_hitpoint - tmp) << " points!" << std::endl;
+	std::cout << _name << " left " << _hitpoint << " hitpoint" << std::endl;
 	this->_energypoint--;
 }
