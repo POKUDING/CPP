@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 19:53:16 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/18 21:00:41 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/19 15:28:50 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ DiamondTrap::DiamondTrap()
 	this->_attackdamage = FragTrap::_attackdamage;
 	this->_energypoint = 50;
 	this->_hitpoint = FragTrap::_hitpoint;
-	
+	std::cout << "DiamondTrap " << _name << ": created" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name)
@@ -29,6 +29,7 @@ DiamondTrap::DiamondTrap(std::string name)
 	this->_attackdamage = FragTrap::_attackdamage;
 	this->_energypoint = 50;
 	this->_hitpoint = FragTrap::_hitpoint;
+	std::cout << "DiamondTrap " << _name << ": created" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap& src)
@@ -38,7 +39,9 @@ DiamondTrap::DiamondTrap(DiamondTrap& src)
 	this->_attackdamage = src._attackdamage;
 	this->_energypoint = src._energypoint;
 	this->_hitpoint = src._hitpoint;
+	std::cout << "ClapTrap " << _name << ": copy created" << std::endl;
 }
+
 DiamondTrap&	DiamondTrap::operator = (DiamondTrap& src)
 {
 	this->_name = src._name;
@@ -46,6 +49,7 @@ DiamondTrap&	DiamondTrap::operator = (DiamondTrap& src)
 	this->_attackdamage = src._attackdamage;
 	this->_energypoint = src._energypoint;
 	this->_hitpoint = src._hitpoint;
+	std::cout << "ClapTrap " << _name << ": copyed" << std::endl;
 	return (*this);
 }
 
