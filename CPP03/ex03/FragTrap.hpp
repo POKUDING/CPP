@@ -6,7 +6,7 @@
 /*   By: junhyupa <junhyupa@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 15:42:24 by junhyupa          #+#    #+#             */
-/*   Updated: 2023/06/18 20:18:37 by junhyupa         ###   ########.fr       */
+/*   Updated: 2023/06/19 12:42:23 by junhyupa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	FragTrap(std::string name);
 	FragTrap(FragTrap& src);
 	FragTrap& operator = (FragTrap& src);
-	~FragTrap();
+	virtual ~FragTrap();
 
 	void	attack(const std::string& target);
 	void	highFivesGuys(void);
